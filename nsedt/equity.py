@@ -280,3 +280,17 @@ def get_symbols_list():
         eq_list.append(f_dict["data"][i]["metadata"]["symbol"])
 
     return eq_list
+
+def get_cmp(
+        symbol
+):
+    """
+    Args:
+        symbol of the stock
+
+    Returns:
+        Last price of the stock symbol
+
+    """
+
+    return get_companyinfo(symbol)["priceInfo"]["lastPrice"]
